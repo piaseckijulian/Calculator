@@ -31,14 +31,18 @@ const operation = (sign) => {
     result.innerText.endsWith('/') ||
     result.innerText.endsWith('.')
   ) {
-    return;
+    console.log();
   } else if (result.innerText === '') {
     if (sign === '-') {
       result.innerText += sign;
-    } else {
-      return;
     }
   } else {
+    result.innerText += sign;
+  }
+  if (
+    sign === '-' &&
+    (result.innerText.endsWith('*') || result.innerText.endsWith('/'))
+  ) {
     result.innerText += sign;
   }
 };
@@ -57,6 +61,9 @@ const calculate = () => {
     setTimeout(() => (result.innerText = ''), 1000);
   } else {
     result.innerText = eval(result.innerText);
+  }
+  if (result.innerText === 'undefined') {
+    result.innerText = '0';
   }
 };
 
