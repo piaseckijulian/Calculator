@@ -42,7 +42,6 @@ const operation = (sign) => {
     result.innerText.endsWith('/') ||
     result.innerText.endsWith('.')
   ) {
-    console.log();
   } else if (result.innerText === '') {
     if (sign === '-') {
       result.innerText += sign;
@@ -52,10 +51,9 @@ const operation = (sign) => {
   }
   if (
     sign === '-' &&
-    (result.innerText.endsWith('*') ||
-      result.innerText.endsWith('/') ||
-      result.innerText.endsWith('+'))
-  ) {
+    result.innerText.endsWith('*') ||
+    result.innerText.endsWith('/') || result.innerText.endsWith('+'))
+   {
     result.innerText += sign;
   }
 };
