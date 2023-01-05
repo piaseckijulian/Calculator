@@ -51,9 +51,10 @@ const operation = (sign) => {
   }
   if (
     sign === '-' &&
-    result.innerText.endsWith('*') ||
-    result.innerText.endsWith('/') || result.innerText.endsWith('+'))
-   {
+    (result.innerText.endsWith('*') ||
+      result.innerText.endsWith('/') ||
+      result.innerText.endsWith('+'))
+  ) {
     result.innerText += sign;
   }
 };
