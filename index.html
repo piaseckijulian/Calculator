@@ -1,47 +1,43 @@
 <!-- HTML CODE FROM https://codepen.io/giana/pen/GJMBEv -->
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.scss" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="style.scss">
-</head>
+  <body>
+    <h1>Calculator</h1>
+    <h3 class="warning">Don't divide by 0</h3>
 
-<body>
-  <h1>Calculator</h1>
-  <p class="warning">Don't divide by 0</p>
+    <div id="calculator" class="calculator">
+      <button id="clear" class="clear">C</button>
 
-  <div id="calculator" class="calculator">
+      <div id="viewer" class="viewer"></div>
 
-    <button id="clear" class="clear">C</button>
+      <button class="num">7</button>
+      <button class="num">8</button>
+      <button class="num">9</button>
+      <button id="plus">+</button>
 
-    <div id="viewer" class="viewer"></div>
+      <button class="num">4</button>
+      <button class="num">5</button>
+      <button class="num">6</button>
+      <button id="minus">-</button>
 
-    <button class="num" data-num="7">7</button>
-    <button class="num" data-num="8">8</button>
-    <button class="num" data-num="9">9</button>
-    <button id="plus">+</button>
+      <button class="num">1</button>
+      <button class="num">2</button>
+      <button class="num">3</button>
+      <button id="multiply">*</button>
 
-    <button class="num" data-num="4">4</button>
-    <button class="num" data-num="5">5</button>
-    <button class="num" data-num="6">6</button>
-    <button id="minus">-</button>
+      <button class="num">0</button>
+      <button id="dot">.</button>
+      <button id="equals">=</button>
+      <button id="divide">/</button>
+    </div>
 
-    <button class="num" data-num="1">1</button>
-    <button class="num" data-num="2">2</button>
-    <button class="num" data-num="3">3</button>
-    <button id="multiply">*</button>
-
-    <button class="num" data-num="0">0</button>
-    <button id="dot">.</button>
-    <button id="equals">=</button>
-    <button id="divide">/</button>
-  </div>
-
-  <button id="reset" class="reset">Reset Universe?</button>
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
